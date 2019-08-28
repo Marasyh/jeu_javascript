@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Snake</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/jeu.css" type="text/css" media="screen">
+</head>
+
+<body onload="draw()">
+
+
+<canvas id="canvas" width="700" height="500" style="border: 7px rgb(114, 45, 5) solid">
+   
+    <script>
+
+   
+    function draw() {
+    var canvas = document.getElementById("canvas");
+    var ctx = canvas.getContext("2d");
+
+        // carré
+        ctx.fillStyle = "green";
+        ctx.fillRect (600, 250, 20, 20);
+
+        ctx.fillStyle = "green";
+        ctx.fillRect(300, 400, 20, 20);
+
+        ctx.fillStyle = "green";
+        ctx.fillRect(500, 300, 20, 20);
+
+        ctx.fillStyle = "green";
+        ctx.fillRect(100, 200, 20, 20);
+
+        ctx.fillStyle = "green";
+        ctx.fillRect(350, 100, 20, 20);
+
+
+        //rond
+        ctx.fillStyle = "red";
+        ctx.beginPath();
+        ctx.arc(100, 100, 12, 0, Math.PI * 2, false);
+        ctx.fill();
+
+        ctx.fillStyle = "red";
+        ctx.beginPath();
+        ctx.arc(400, 400, 12, 0, Math.PI * 2, false);
+        ctx.fill();
+
+        ctx.fillStyle = "red";
+        ctx.beginPath();
+        ctx.arc(200, 400, 12, 0, Math.PI * 2, false);
+        ctx.fill();
+
+        ctx.fillStyle = "red";
+        ctx.beginPath();
+        ctx.arc(600, 100, 12, 0, Math.PI * 2, false);
+        ctx.fill();
+
+        ctx.fillStyle = "red";
+        ctx.beginPath();
+        ctx.arc(300, 200, 12, 0, Math.PI * 2, false);
+        ctx.fill();
+
+        }
+
+ 
+        var canvas = document.getElementById('canvas');
+        var ctx = canvas.getContext('2d');
+            //  toutes les 10 ms exécute game()
+        var intervalID = setInterval(game, 10);
+        
+
+        //touche clavier pour faire une pause ou réinitialiser le jeu.
+        document.addEventListener("keydown", keyboard);
+        function keyboard(evt) {
+                switch (evt.keyCode) {
+                    case 37:
+                        // touche gauche
+                        break;
+                    case 38:
+                        // touche haut
+                        break;
+                    case 39:
+                        // touche droite
+                        break;
+                    case 40:
+                        // touche bas
+                        break;
+                    case 32:
+                        // touche espace
+                        break;
+                }
+            }
+
+        // serpent
+        function game() {
+            ctx.fillStyle = "black";
+            ctx.fillRect(150, 150, 154, 20);
+        }
+
+       
+  </script>
+ 
+ 
+</canvas>
+
+
+ <script src="js/script.js"> </script>
+</body>
+
+</html>
